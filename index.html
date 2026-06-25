@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="landing page.css">
+</head>
+<body>
+     <nav id="navbar">
+    <div class="logo">MySite</div>
+
+    <ul class="nav-links">
+      <li><a href="#home"class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+
+  <section id="home">
+    <h1>👋 Welcome to MySite</h1>
+    <p>This is a simple landing page with a navigation bar that changes color when you scroll.</p>
+    <a href="#about" class="btn">Learn More</a>
+  </section>
+
+
+  <section id="about">
+    <h1>About Us</h1>
+    <p>We are a small team that loves building things for the web. We keep things simple, clean, and easy to understand.</p>
+    <a href="#services" class="btn">Our Services</a>
+  </section>
+
+  <section id="services">
+    <h1>Services</h1>
+    <p>Here are some things we can help you with.</p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">🎨</div>
+        <h3>Design</h3>
+        <p>Beautiful and clean layouts for any screen size.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💻</div>
+        <h3>Development</h3>
+        <p>Building fast and reliable websites with code.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📱</div>
+        <h3>Mobile</h3>
+        <p>Websites that look great on phones and tablets.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="contact">
+    <h1>Contact Us</h1>
+    <p>Send us a message and we'll get back to you soon.</p>
+
+    <form onsubmit="sendMessage(event)">
+      <input type="text"  placeholder="Your Name"  required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your message..."></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+<script src="landing page.js"></script>
+
+</body>
+</html>

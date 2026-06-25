@@ -1,0 +1,198 @@
+
+    
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ffffff;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+      /* Smooth color change when scrolling */
+      transition: background-color 0.3s;
+    }
+
+    
+    nav.scrolled {
+      background-color: #4a90e2;
+    }
+
+    /* Logo / site name */
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #4a90e2;
+      transition: color 0.3s;
+    }
+
+    nav.scrolled .logo {
+      color: #ffffff;
+    }
+
+  
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+    }
+
+  
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 15px;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    /
+    .nav-links a:hover {
+      background-color: #4a90e2;
+      color: #ffffff;
+    }
+
+    
+    .nav-links a.active {
+      background-color: #4a90e2;
+      color: #ffffff;
+    }
+
+   
+    nav.scrolled .nav-links a {
+      color: #ffffff;
+    }
+
+    nav.scrolled .nav-links a:hover,
+    nav.scrolled .nav-links a.active {
+      background-color: #ffffff;
+      color: #4a90e2;
+    }
+
+
+    section {
+      min-height: 100vh;
+      padding: 120px 40px 60px; /* top padding = nav height + extra */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    section h1 {
+      font-size: 42px;
+      margin-bottom: 16px;
+    }
+
+    section p {
+      font-size: 18px;
+      color: #666;
+      max-width: 500px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+   
+    .btn {
+      background-color: #4a90e2;
+      color: white;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #2a70c2;
+      transform: translateY(-2px);
+    }
+
+    
+    #home     { background-color: #d3d8e0; }
+    #about    { background-color: #ffffff; }
+    #services { background-color: #f0f8ff; }
+    #contact  { background-color: #ffffff; }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 2px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 30px 24px;
+      width: 220px;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+
+    .card:hover {
+      border-color: #4a90e2;
+      box-shadow: 0 6px 20px rgba(74, 144, 226, 0.2);
+      transform: translateY(-4px);
+    }
+
+    .card-icon { font-size: 36px; margin-bottom: 12px; }
+    .card h3   { font-size: 18px; margin-bottom: 8px; }
+    .card p    { font-size: 14px; color: #777; }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+      max-width: 420px;
+      text-align: left;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border-color: #4a90e2;
+    }
+
+    form textarea { height: 110px; resize: vertical; }
+
+   
+    @media (max-width: 600px) {
+      .nav-links { gap: 4px; }
+      .nav-links a { padding: 6px 10px; font-size: 13px; }
+      section h1 { font-size: 28px; }
+        .card { width: 100%; max-width: 300px; }
+    }
